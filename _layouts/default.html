@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    {% include head.html %}
+    {% if page.codeinjection_head %}{{ page.codeinjection_head }}{% endif %}
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="{{ '/' | relative_url }}">Posts</a>
+        <a href="{{ '/tags/' | relative_url }}">Tags</a>
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}</p>
+    </footer>
+    {% if page.codeinjection_foot %}{{ page.codeinjection_foot }}{% endif %}
+  </body>
+</html>

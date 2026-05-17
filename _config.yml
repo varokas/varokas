@@ -1,0 +1,29 @@
+title: Minimal Engineering
+description: ""
+url: "https://www.varokas.com"
+baseurl: ""
+lang: en
+timezone: Asia/Bangkok
+
+permalink: /:slug/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - PLAN.md
+  - scripts
+  - vendor
+  - minimal-engineering.ghost.2026-05-17-13-13-43.json
