@@ -22,5 +22,6 @@
       <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}</p>
     </footer>
     {% if page.codeinjection_foot %}{{ page.codeinjection_foot }}{% endif %}
+    {% if page.mermaid %}{% include mermaid.html %}{% endif %}
   </body>
 </html>
