@@ -24,6 +24,14 @@ To log in to this computer remotely, type "ssh username@Your-MacBook.local"
 
 That's your address. By default it allows access to all users; you can restrict it to specific ones if needed.
 
+If you're not sure what your username or hostname are, run these on the Mac:
+
+```bash
+whoami          # your username
+hostname        # your hostname (e.g. Your-MacBook.local)
+ipconfig getifaddr en0   # IP address over Wi-Fi (use en1 for Ethernet)
+```
+
 ---
 
 ## 2. Prevent the Mac from Sleeping
