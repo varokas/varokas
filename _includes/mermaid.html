@@ -1,11 +1,12 @@
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
   document.querySelectorAll('code.language-mermaid').forEach(el => {
-    const pre = el.parentElement;
+    const block = el.closest('div.highlighter-rouge') || el.closest('pre');
     const div = document.createElement('pre');
     div.className = 'mermaid';
     div.textContent = el.textContent;
-    pre.replaceWith(div);
+    block.replaceWith(div);
   });
-  mermaid.initialize({ startOnLoad: true });
+  const dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  mermaid.initialize({ startOnLoad: true, theme: dark ? 'dark' : 'neutral' });
 </script>

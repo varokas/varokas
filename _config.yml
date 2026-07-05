@@ -1,5 +1,5 @@
 title: Minimal Engineering
-description: ""
+description: "Notes on software and systems, written down so I don't have to solve the same problem twice."
 url: "https://www.varokas.com"
 baseurl: ""
 lang: en
@@ -24,6 +24,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - PLAN.md
+  - DESIGN.md
   - scripts
   - vendor
   - minimal-engineering.ghost.2026-05-17-13-13-43.json

@@ -5,14 +5,13 @@ permalink: /tags/
 ---
 
 <section class="archive">
-  <h1>Tags</h1>
+  <h2 class="section-label">Tags</h2>
 
-  <ul class="tag-list">
+  <ul class="tag-cloud">
     {% assign sorted_tags = site.tags | sort %}
     {% for tag in sorted_tags %}
       <li>
-        <a href="{{ '/tags/' | append: tag[0] | append: '/' | relative_url }}">{{ tag[0] }}</a>
-        <span>{{ tag[1].size }}</span>
+        <a class="tag" href="{{ '/tags/' | append: tag[0] | append: '/' | relative_url }}">{{ tag[0] }}<em>{{ tag[1].size }}</em></a>
       </li>
     {% endfor %}
   </ul>

@@ -5,6 +5,8 @@
     {% if page.codeinjection_head %}{{ page.codeinjection_head }}{% endif %}
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="site-header">
       <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
       <nav class="site-nav" aria-label="Primary navigation">
@@ -14,12 +16,13 @@
       </nav>
     </header>
 
-    <main class="site-main">
+    <main class="site-main" id="main">
       {{ content }}
     </main>
 
     <footer class="site-footer">
       <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}</p>
+      <p><a href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS</a></p>
     </footer>
     {% if page.codeinjection_foot %}{{ page.codeinjection_foot }}{% endif %}
     {% if page.mermaid %}{% include mermaid.html %}{% endif %}
